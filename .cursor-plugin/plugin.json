@@ -1,0 +1,7 @@
+{
+  "name": "decision-guard",
+  "version": "0.1.0",
+  "description": "Pause non-trivial edits that contradict recorded decisions or hard constraints",
+  "keywords": ["decisions", "drift", "guard", "architecture", "implementation"],
+  "license": "MIT"
+}

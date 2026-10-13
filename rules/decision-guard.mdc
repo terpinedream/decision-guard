@@ -1,0 +1,21 @@
+---
+description: Before non-trivial edits, check recorded decisions and hard constraints for drift
+alwaysApply: true
+---
+
+When implementing or editing non-trivial work (Agent mode, or any request to
+build, fix, refactor, or add something consequential), do NOT silently
+contradict recorded architecture choices or hard constraints.
+
+First use the `decision-guard` skill: load `.cursor/decisions.md` and hard
+constraints from `.cursor/context.md`, infer what the intended changes imply,
+and pause with the skill's condensed chooser only on conflicts or new
+high-impact forks. If aligned, proceed without a user-facing checkpoint.
+
+Skip the guard when neither `.cursor/decisions.md` nor `.cursor/context.md`
+exists, or for small local changes (a bug fix with a clear known path that
+does not touch architecture, a rename, a single function, a typo, a config
+tweak).
+
+Do not run this checkpoint for Plan-mode elicitation or upfront scoping —
+that belongs to autoscope / design-checkpoint.
